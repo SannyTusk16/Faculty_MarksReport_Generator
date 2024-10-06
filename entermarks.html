@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Entry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+        }
+        .top-bar button, .save-btn {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .upload-btn {
+            background-color: #28a745;
+            color: white;
+        }
+        .edit-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+        .save-btn {
+            background-color: #28a745;
+            color: white;
+        }
+        .exam-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .exam-details {
+            margin: 20px 0;
+        }
+        .exam-details h2 {
+            margin-bottom: 10px;
+        }
+        .roll-range {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .roll-range input {
+            padding: 10px;
+            width: 350px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        table th, table td {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+        table th {
+            background-color: #f1f1f1;
+        }
+        .student-id, .student-name {
+            width: 150px;
+            text-align: left;
+        }
+        .save-exit-btn {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="top-bar">
+        <button class="upload-btn">Upload</button>
+        <button class="edit-btn">Edit Exam Details</button>
+        <input type="text" class="search-bar" placeholder="Search for a student or examination">
+        <button class="save-btn">Save</button>
+        <span>Vinay Kumar</span>
+    </div>
+
+    <div class="exam-header">
+        <div class="exam-details">
+            <h2>CSE-A</h2>
+            <p><strong>Date:</strong> 11 Sep, 2001</p>
+            <p><strong>FSWD Lab Internals-1</strong></p>
+        </div>
+        <button class="edit-btn">Edit</button>
+    </div>
+
+    <div class="roll-range">
+        <p><strong>Roll Numbers range:</strong></p>
+        <input type="text" placeholder="e.g., 23723001 - 23723005, 23723006-23723009">
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>StudentID</th>
+                    <th>Student Name</th>
+                    <th>CO1</th>
+                    <th>CO2</th>
+                    <th>CO3</th>
+                    <th>CO4</th>
+                    <th>CO5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                    <th>9</th>
+                    <th>10</th>
+                    <th>11</th>
+                    <th>12a</th>
+                    <th>12b</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="student-id"><input type="text" placeholder="StudentID"></td>
+                    <td class="student-name"><input type="text" placeholder="Student Name"></td>
+                    <td><input type="text" placeholder="CO1"></td>
+                    <td><input type="text" placeholder="CO2"></td>
+                    <td><input type="text" placeholder="CO3"></td>
+                    <td><input type="text" placeholder="CO4"></td>
+                    <td><input type="text" placeholder="CO5"></td>
+                    <td><input type="text" placeholder="6"></td>
+                    <td><input type="text" placeholder="7"></td>
+                    <td><input type="text" placeholder="8"></td>
+                    <td><input type="text" placeholder="9"></td>
+                    <td><input type="text" placeholder="10"></td>
+                    <td><input type="text" placeholder="11"></td>
+                    <td><input type="text" placeholder="12a"></td>
+                    <td><input type="text" placeholder="12b"></td>
+                    <td><input type="text" placeholder="Total"></td>
+                </tr>
+                <!-- Repeat for other students -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="save-exit-btn">
+        <button class="save-btn">SAVE AND EXIT</button>
+    </div>
+</div>
+
+</body>
+</html>
