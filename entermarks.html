@@ -12,22 +12,27 @@
             background-color: #f5f5f5;
         }
         .container {
-            max-width: 1200px;
-            margin: 50px auto;
             padding: 20px;
             background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         .top-bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-bottom: 20px;
+        }
+        .top-bar-left{
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+        }
+        .top-bar-right{
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            align-items: center;
         }
         .top-bar button, .save-btn {
-            padding: 10px 20px;
-            margin-right: 10px;
+            height:35px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -36,19 +41,34 @@
         .upload-btn {
             background-color: #28a745;
             color: white;
+            border-radius: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+            height: 33px;
+            border: none;
+            max-width: 150px;
+            padding: 0px 10px 0px 10px;
         }
         .edit-btn {
             background-color: #dc3545;
             color: white;
-        }
-        .save-btn {
-            background-color: #28a745;
-            color: white;
+            border-radius: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+            height: 33px;
+            border: none;
+            max-width: 150px;
+            padding: 0px 10px 0px 10px;
         }
         .exam-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+        .search-bar{
+            height:33px;
+            width: 500px;
+            border-radius: 5px;
         }
         .exam-details {
             margin: 20px 0;
@@ -69,7 +89,7 @@
             border-radius: 5px;
         }
         .table-container {
-            overflow-x: auto;
+            overflow : auto;
         }
         table {
             width: 100%;
@@ -88,8 +108,18 @@
             text-align: left;
         }
         .save-exit-btn {
-            margin-top: 20px;
             text-align: center;
+            height: 40px;
+            align-items: center;
+            margin-top: 10px;
+            border: none;
+        }
+        .upload-btn:hover {
+            background-color: #009c24; /* Blue on hover */
+        }
+
+        .edit-btn:hover {
+            background-color: #fe2e09; /* Light red on hover */
         }
     </style>
 </head>
@@ -97,11 +127,15 @@
 
 <div class="container">
     <div class="top-bar">
-        <button class="upload-btn">Upload</button>
-        <button class="edit-btn">Edit Exam Details</button>
+        <div class ="top-bar-left">
+            <button class="upload-btn">Upload</button>
+            <button class="edit-btn">Edit Exam Details</button>
+        </div>
         <input type="text" class="search-bar" placeholder="Search for a student or examination">
-        <button class="save-btn">Save</button>
-        <span>Vinay Kumar</span>
+        <div class="top-bar-right">
+            <button class="upload-btn">Save</button>
+            <span>Vinay Kumar</span>
+        </div>
     </div>
 
     <div class="exam-header">
@@ -165,7 +199,7 @@
     </div>
 
     <div class="save-exit-btn">
-        <button class="save-btn">SAVE AND EXIT</button>
+        <button class="upload-btn">SAVE AND EXIT</button>
     </div>
 </div>
 
